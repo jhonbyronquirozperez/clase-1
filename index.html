@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clase 1: HTML desde cero</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+      function copiarCodigo() {
+        const codigo = document.getElementById('codigo-linktree').textContent;
+        navigator.clipboard.writeText(codigo).then(() => {
+          alert('✅ Código copiado al portapapeles. ¡Ahora pégalo en tu editor!');
+        }).catch(() => {
+          alert('⚠️ No se pudo copiar. Intenta seleccionar el código manualmente.');
+        });
+      }
+    </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <span class="dot"></span>
+        <span>Clase 1: HTML desde cero</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#objetivo">Objetivo</a>
+        <a href="#conceptos">Conceptos</a>
+        <a href="#estructura">Estructura</a>
+        <a href="#etiquetas">Etiquetas</a>
+        <a href="#reto">Reto</a>
+        <a href="#proyecto-final">Proyecto Final</a>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Aprende HTML desde cero</h1>
+        <p class="lead">
+          Esta guía está diseñada para estudiantes sin experiencia: explica qué es HTML,
+          cómo funciona con etiquetas y cómo crear una primera página web simple.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#estructura">Ver estructura base</a>
+          <a class="btn" href="https://code.visualstudio.com/" target="_blank">Ir a visual Studio Code</a>
+        </div>
+
+        <div class="pill-row">
+          <span class="pill">✅ 100% principiantes</span>
+          <span class="pill">🏁 Reto final</span>
+        </div>
+
+      </div>
+
+      <div class="card hero-card">
+        <h3>¿Qué aprenderán hoy?</h3>
+        <p>• Qué es HTML y para qué sirve</p>
+        <p>• Cómo funcionan las etiquetas</p>
+        <p>• Estructura básica de un documento</p>
+        <p>• Etiquetas esenciales: títulos, párrafos, enlaces, imágenes y listas</p>
+        <p>• Cómo guardar y abrir un archivo .html</p>
+        <a class="btn primary" href="#objetivo">Empezar</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- OBJETIVO -->
+    <section id="objetivo">
+      <div class="section-title">
+        <h2>Objetivo de la clase</h2>
+        <p>Que salgan con una idea clara y una página creada por ellos.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card box">
+          <div class="badge"><span class="b"></span>Qué es HTML</div>
+          <h3>Entender el “esqueleto”</h3>
+          <p>HTML organiza el contenido de una página: títulos, textos, enlaces e imágenes.</p>
+          <img src="https://d2dkqamqz2k831.cloudfront.net/posts/338-1733217432633.jpg" alt="HTML estructura" width="100%" style="max-width: 300px; height: auto; border-radius: 8px; margin-top: 12px;">
+        </div>
+
+        <div class="card box">
+          <div class="badge"><span class="b"></span>Cómo se escribe</div>
+          <h3>Aprender etiquetas</h3>
+          <p>Las etiquetas se abren y se cierran para crear bloques de contenido.</p>
+          <img src="https://www.ampersoundmedia.com/wp-content/uploads/2020/07/html-scaled.jpg" alt="">
+        </div>
+
+        <div class="card box">
+          <div class="badge"><span class="b"></span>Resultado final</div>
+          <h3>Primer Reto</h3>
+          <p>Crear un archivo <b>index.html</b> y abrirlo en el navegador. <br> debe mostrar tu nombre y apellidos en un titulo </p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRivTOze5N5b7ziCnwsJ1KRO2_Ks3117dspgg&s" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCEPTOS -->
+    <section id="conceptos">
+      <div class="section-title">
+        <h2>Conceptos clave</h2>
+        <p>HTML, CSS y JavaScript: cada uno tiene un rol.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card box">
+          <h3>HTML = Estructura</h3>
+          <p>Define qué existe: títulos, párrafos, botones, imágenes, listas.</p>
+        </div>
+        <div class="card box">
+          <h3>CSS = Diseño</h3>
+          <p>Cómo se ve: colores, tamaños, tipografía, espaciado y layout.</p>
+        </div>
+        <div class="card box">
+          <h3>JavaScript = Acción</h3>
+          <p>Cómo se comporta: interacciones, eventos, lógica, datos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETIQUETAS -->
+    <section id="etiquetas">
+      <div class="section-title">
+        <h2>¿Qué es una etiqueta?</h2>
+        <p>Piensa en “cajitas” que contienen información.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>Ejemplo: Título</h3>
+          <p>La etiqueta abre, el contenido va adentro, y la etiqueta cierra.</p>
+          <pre><code>&lt;h1&gt;Hola mundo&lt;/h1&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Ejemplo: Párrafo</h3>
+          <p>Un párrafo es texto normal dentro de una etiqueta.</p>
+          <pre><code>&lt;p&gt;Esto es un párrafo.&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+
+      <div style="margin-top:14px" class="grid-2">
+        <details>
+          <summary>✅ Tip para explicar fácil</summary>
+          <p>“HTML es como armar una página con bloques. Cada bloque abre y cierra”.</p>
+        </details>
+        <details>
+          <summary>❗ Error común</summary>
+          <p>Olvidar cerrar una etiqueta o escribirla mal. Por eso es clave ordenar el código.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ESTRUCTURA -->
+    <section id="estructura">
+      <div class="section-title">
+        <h2>Estructura básica de un documento HTML</h2>
+        <p>Este es el “molde” que siempre usarás.</p>
+      </div>
+
+      <div class="card box">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;Mi primera página web&lt;/h1&gt;
+  &lt;p&gt;Hola, hoy estoy aprendiendo HTML desde cero.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+
+      <div style="margin-top:14px" class="grid-3">
+        <div class="card box">
+          <h3>&lt;head&gt;</h3>
+          <p>Información “invisible”: título, configuración y metadatos.</p>
+        </div>
+        <div class="card box">
+          <h3>&lt;title&gt;</h3>
+          <p>Lo que aparece en la pestaña del navegador.</p>
+        </div>
+        <div class="card box">
+          <h3>&lt;body&gt;</h3>
+          <p>Todo lo que se ve en la página: textos, imágenes, links, etc.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETIQUETAS BASICAS -->
+    <section>
+      <div class="section-title">
+        <h2>Etiquetas básicas de hoy</h2>
+        <p>Con estas ya puedes construir una mini web.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>Títulos</h3>
+          <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;</code></pre>
+        </div>
+        <div class="card box">
+          <h3>Párrafos</h3>
+          <pre><code>&lt;p&gt;Este es un texto normal.&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Enlaces</h3>
+          <pre><code>&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
+        </div>
+        <div class="card box">
+          <h3>Imágenes</h3>
+          <pre><code>&lt;img src="https://via.placeholder.com/200" alt="Imagen ejemplo"&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Listas</h3>
+          <pre><code>&lt;ul&gt;
+  &lt;li&gt;Pan&lt;/li&gt;
+  &lt;li&gt;Huevos&lt;/li&gt;
+  &lt;li&gt;Leche&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+        <div class="card box">
+          <h3>Separadores útiles</h3>
+          <pre><code>&lt;br&gt;   &lt;!-- salto de línea --&gt;
+&lt;hr&gt;   &lt;!-- línea horizontal --&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- TABLA DE ETIQUETAS -->
+      <div class="section-title" style="margin-top:36px">
+        <h2>Tabla de etiquetas más usadas</h2>
+        <p>Referencia rápida de las etiquetas esenciales en HTML.</p>
+      </div>
+
+      <div class="card box" style="overflow-x: auto;">
+        <table style="width:100%; border-collapse:collapse; color:var(--text); font-size:14px;">
+          <thead>
+            <tr style="background-color:rgba(124,92,255,.15); border-bottom:2px solid var(--border);">
+              <th style="padding:12px; text-align:left; font-weight:700; color:var(--brand);">Etiqueta</th>
+              <th style="padding:12px; text-align:left; font-weight:700; color:var(--brand);">Para qué sirve</th>
+              <th style="padding:12px; text-align:left; font-weight:700; color:var(--brand);">Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;h1&gt; a &lt;h6&gt;</code></td>
+              <td style="padding:12px;">Títulos y subtítulos (h1 es el más importante)</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;h1&gt;Título&lt;/h1&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;p&gt;</code></td>
+              <td style="padding:12px;">Párrafos de texto</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;p&gt;Contenido&lt;/p&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;a&gt;</code></td>
+              <td style="padding:12px;">Enlaces a otras páginas o sitios</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;a href="..."&gt;Link&lt;/a&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;img&gt;</code></td>
+              <td style="padding:12px;">Insertar imágenes</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;img src="..." alt="..."&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></td>
+              <td style="padding:12px;">Crear listas (desordenadas u ordenadas)</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;div&gt;</code></td>
+              <td style="padding:12px;">Contenedor genérico para agrupar elementos</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;div&gt;Contenido&lt;/div&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;span&gt;</code></td>
+              <td style="padding:12px;">Contenedor en línea para texto</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;span&gt;Texto&lt;/span&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;button&gt;</code></td>
+              <td style="padding:12px;">Crear botones interactivos</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;button&gt;Enviar&lt;/button&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;input&gt;</code></td>
+              <td style="padding:12px;">Campos de entrada (texto, email, etc)</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;input type="text"&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;textarea&gt;</code></td>
+              <td style="padding:12px;">Área de texto multiline</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;textarea&gt;&lt;/textarea&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;select&gt;, &lt;option&gt;</code></td>
+              <td style="padding:12px;">Menú desplegable</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;select&gt;&lt;option&gt;...&lt;/option&gt;&lt;/select&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;label&gt;</code></td>
+              <td style="padding:12px;">Etiqueta para campos de formularios</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;label for="id"&gt;Nombre&lt;/label&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;form&gt;</code></td>
+              <td style="padding:12px;">Contiene campos para enviar datos</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;form action="..."&gt;...&lt;/form&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;br&gt;</code></td>
+              <td style="padding:12px;">Salto de línea</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;br&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;hr&gt;</code></td>
+              <td style="padding:12px;">Línea horizontal separadora</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;hr&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;strong&gt;</code></td>
+              <td style="padding:12px;">Texto en negrita (semántico/importante)</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;strong&gt;Importante&lt;/strong&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;em&gt;</code></td>
+              <td style="padding:12px;">Texto en itálica (énfasis)</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;em&gt;Énfasis&lt;/em&gt;</code></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:12px;"><code>&lt;table&gt;</code></td>
+              <td style="padding:12px;">Crear tablas de datos</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td>
+            </tr>
+            <tr>
+              <td style="padding:12px;"><code>&lt;code&gt;</code></td>
+              <td style="padding:12px;">Mostrar código fuente</td>
+              <td style="padding:12px; color:var(--muted);"><code>&lt;code&gt;var x = 5;&lt;/code&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- RETO -->
+    <section id="reto">
+      <div class="section-title">
+        <h2>Mini reto (10 minutos)</h2>
+        <p>Que cada persona haga su mini página personal.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>Instrucciones</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <h4>Un título con tu nombre</h4>
+                <p>Usa <code>&lt;h1&gt;</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <h4>Un párrafo con lo que te gusta</h4>
+                <p>Usa <code>&lt;p&gt;</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <h4>Lista con 3 hobbies</h4>
+                <p>Usa <code>&lt;ul&gt;</code> y <code>&lt;li&gt;</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <h4>Un link y una imagen</h4>
+                <p>Usa <code>&lt;a&gt;</code> y <code>&lt;img&gt;</code>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card box">
+          <h3>Plantilla del reto</h3>
+          <pre><code>&lt;h1&gt;Mi nombre es ____&lt;/h1&gt;
+&lt;p&gt;Me gusta ____ porque ____.&lt;/p&gt;
+
+&lt;h2&gt;Mis hobbies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;____&lt;/li&gt;
+  &lt;li&gt;____&lt;/li&gt;
+  &lt;li&gt;____&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;a href="https://instagram.com"&gt;Mi red favorita&lt;/a&gt;
+
+&lt;img src="https://via.placeholder.com/200" alt="Foto"&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARDAR -->
+    <section id="descargar">
+      <div class="section-title">
+        <h2>Cómo guardar y abrir tu archivo .html</h2>
+        <p>Este paso es clave para que no se frustren.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card box">
+          <h3>1) Crear archivo</h3>
+          <p>Abre Bloc de notas o VS Code y pega el código.</p>
+        </div>
+        <div class="card box">
+          <h3>2) Guardar como</h3>
+          <p>Nombre: <b>index.html</b> (importante que termine en <b>.html</b>).</p>
+        </div>
+        <div class="card box">
+          <h3>3) Abrir en navegador</h3>
+          <p>Doble clic al archivo o arrástralo a Chrome.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:14px" class="card box">
+        <h3>Qué aprendimos ?</h3>
+        <p style="color:var(--muted); margin:0">
+          “Hoy aprendimos a crear el esqueleto de una página web.”
+        </p>
+      </div>
+    </section>
+    <!-- PROYECTO FINAL: LINKTREE -->
+    <section id="proyecto-final">
+      <div class="section-title">
+        <h2>🚀 Proyecto Final: Tu Linktree Personalizado</h2>
+        <p>Crea tu propia página de enlaces (como un Linktree) con todo lo que aprendiste.</p>
+      </div>
+
+      <div class="card box" style="margin-bottom:14px">
+        <h3>¿Qué es un Linktree?</h3>
+        <p>Una página personal que centraliza todos tus enlaces en un solo lugar. Perfecta para redes sociales o tu portafolio personal. Es una página moderna, hermosa y completamente personalizable.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>Instrucciones del Proyecto</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <h4>Copia todo el código</h4>
+                <p>Copia el bloque de código que está abajo</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <h4>Pega en tu editor</h4>
+                <p>Abre Bloc de notas o VS Code y pega el código</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <h4>Personaliza</h4>
+                <p>Cambia tu nombre, bio, foto y enlaces</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="num">4</div>
+              <div>
+                <h4>Guarda como linktree.html</h4>
+                <p>Guarda y abre en el navegador</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card box">
+          <h3>Qué Editar</h3>
+          <ul style="color:var(--muted); margin:0; padding-left:20px;">
+            <li><code>Tu Nombre Aquí</code> → Tu nombre real</li>
+            <li><code>Soy estudiante...</code> → Tu biografía</li>
+            <li><code>Instagram</code> → Tus redes sociales</li>
+            <li><code>https://instagram.com</code> → Links reales</li>
+            <li><code>@tu_usuario</code> → Tu usuario/nombre</li>
+            <li><code>avatar src</code> → Tu foto de perfil</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card box" style="margin-bottom:14px">
+        <h3>📋 Código Completo - COPIA Y PEGA</h3>
+        <div style="position:relative; margin-top:12px;">
+          <button onclick="copiarCodigo()" style="position:absolute; top:0; right:0; padding:8px 16px; background:var(--brand); border:none; border-radius:8px; color:white; cursor:pointer; font-weight:700; font-size:13px; z-index:10;">Copiar</button>
+        </div>
+        <pre id="codigo-linktree" style="background:var(--code); padding:16px; border-radius:12px; overflow-x:auto; margin-top:30px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+  &lt;title&gt;Mi Linktree&lt;/title&gt;
+
+  &lt;style&gt;
+    /* =========================================
+       Estos son los estilos ✅ (colores y estilo general)
+    ========================================== */
+    :root{
+      --bg1: #0f172a;     /* color fondo 1 */
+      --bg2: #111827;     /* color fondo 2 */
+      --card: rgba(255,255,255,0.08);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --btn: rgba(255,255,255,0.10);
+      --btnHover: rgba(255,255,255,0.18);
+      --border: rgba(255,255,255,0.16);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: radial-gradient(900px 500px at 15% 10%, rgba(99,102,241,0.30), transparent 55%),
+                  radial-gradient(700px 480px at 85% 20%, rgba(34,197,94,0.22), transparent 55%),
+                  linear-gradient(160deg, var(--bg1), var(--bg2));
+    }
+
+    .card{
+      width: min(520px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .profile{
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .avatar{
+      width: 92px;
+      height: 92px;
+      border-radius: 999px;
+      border: 2px solid var(--border);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    h1{
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.3px;
+    }
+    .bio{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .links{
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .link{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--btn);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .link:hover{
+      transform: translateY(-2px);
+      background: var(--btnHover);
+    }
+
+    .left{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .icon{
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.15);
+      flex: 0 0 auto;
+      font-size: 16px;
+    }
+
+    .text{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .arrow{
+      opacity: .8;
+      flex: 0 0 auto;
+    }
+
+    footer{
+      margin-top: 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 420px){
+      .card{ padding: 18px; }
+      .link{ padding: 12px; }
+    }
+  &lt;/style&gt;
+
+  
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;main class="card"&gt;
+
+    &lt;!-- =========================================
+         EDITA AQUÍ ✅ (datos del perfil)
+    ========================================== --&gt;
+    &lt;section class="profile"&gt;
+      &lt;img class="avatar" src="https://i.pravatar.cc/200?img=12" alt="Foto de perfil"&gt;
+
+      &lt;h1&gt;Tu Nombre Aquí&lt;/h1&gt;
+      &lt;p class="bio"&gt;
+        Soy estudiante y estoy aprendiendo HTML. Aquí dejo mis enlaces favoritos y mis proyectos.
+      &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;!-- =========================================
+         EDITA AQUÍ ✅ (botones / enlaces)
+         Cambia el texto y el href (link)
+         Puedes duplicar o borrar &lt;a class="link"&gt;...&lt;/a&gt;
+    ========================================== --&gt;
+    &lt;section class="links"&gt;
+      &lt;a class="link" href="https://instagram.com" target="_blank"&gt;
+        &lt;span class="left"&gt;
+          &lt;span class="icon"&gt;📸&lt;/span&gt;
+          &lt;span class="text"&gt;Instagram&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="arrow"&gt;↗&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;a class="link" href="https://tiktok.com" target="_blank"&gt;
+        &lt;span class="left"&gt;
+          &lt;span class="icon"&gt;🎵&lt;/span&gt;
+          &lt;span class="text"&gt;TikTok&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="arrow"&gt;↗&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;a class="link" href="https://www.youtube.com" target="_blank"&gt;
+        &lt;span class="left"&gt;
+          &lt;span class="icon"&gt;▶️&lt;/span&gt;
+          &lt;span class="text"&gt;YouTube&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="arrow"&gt;↗&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;a class="link" href="https://github.com" target="_blank"&gt;
+        &lt;span class="left"&gt;
+          &lt;span class="icon"&gt;💻&lt;/span&gt;
+          &lt;span class="text"&gt;GitHub / Portafolio&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="arrow"&gt;↗&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;a class="link" href="mailto:correo@ejemplo.com"&gt;
+        &lt;span class="left"&gt;
+          &lt;span class="icon"&gt;✉️&lt;/span&gt;
+          &lt;span class="text"&gt;Escríbeme&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span class="arrow"&gt;↗&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/section&gt;
+
+    &lt;!-- =========================================
+         EDITA AQUÍ ✅ (footer)
+    ========================================== --&gt;
+    &lt;footer&gt;
+      Hecho por &lt;b&gt;@tu_usuario&lt;/b&gt; — 2026
+    &lt;/footer&gt;
+
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+
+      <div class="card box">
+        <h3>✨ Tips para personalizar:</h3>
+        <ul style="color:var(--muted); margin:0; padding-left:20px; line-height:1.8;">
+          <li><b>Nombre:</b> Cambia "Tu Nombre Aquí" por tu nombre real</li>
+          <li><b>Bio:</b> Escribe algo sobre ti (hobbies, qué estudias, etc)</li>
+          <li><b>Foto:</b> Cambia el link de la imagen por una tuya o usa <code>https://i.pravatar.cc/200?img=5</code> con otro número</li>
+          <li><b>Enlaces:</b> Reemplaza los links con tus redes sociales reales</li>
+          <li><b>Emojis:</b> Puedes cambiar los emojis (📸, 🎵, etc) por otros</li>
+          <li><b>Colores:</b> En la sección <code>:root{}</code> puedes cambiar los colores de fondo</li>
+          <li><b>Agregar links:</b> Copia y pega un <code>&lt;a class="link"&gt;</code> para agregar más enlaces</li>
+        </ul>
+      </div>
+    </section>
+    <!-- HTML SEMÁNTICO -->
+    <section>
+      <div class="section-title">
+        <h2>HTML Semántico (HTML5)</h2>
+        <p>Etiquetas que dan significado al contenido.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>&lt;header&gt;</h3>
+          <p>Encabezado de la página o sección. Contiene el título principal y navegación.</p>
+          <pre><code>&lt;header&gt;
+  &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;nav&gt;</h3>
+          <p>Área de navegación con enlaces principales.</p>
+          <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;main&gt;</h3>
+          <p>Contenido principal de la página (único por página).</p>
+          <pre><code>&lt;main&gt;
+  &lt;h2&gt;Contenido Principal&lt;/h2&gt;
+  &lt;p&gt;Aquí va todo lo importante.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;section&gt;</h3>
+          <p>Agrupa contenido relacionado por tema.</p>
+          <pre><code>&lt;section&gt;
+  &lt;h2&gt;Sobre mí&lt;/h2&gt;
+  &lt;p&gt;Información personal...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;article&gt;</h3>
+          <p>Contenido independiente (blog, noticia, etc).</p>
+          <pre><code>&lt;article&gt;
+  &lt;h3&gt;Título del Artículo&lt;/h3&gt;
+  &lt;p&gt;Contenido del artículo...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;aside&gt;</h3>
+          <p>Barra lateral o contenido relacionado.</p>
+          <pre><code>&lt;aside&gt;
+  &lt;h3&gt;Contenido Relacionado&lt;/h3&gt;
+  &lt;p&gt;Enlaces o info extra...&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;footer&gt;</h3>
+          <p>Pie de página con copyright y links de contacto.</p>
+          <pre><code>&lt;footer&gt;
+  &lt;p&gt;&copy; 2026 Mi Sitio. Todos los derechos reservados.&lt;/p&gt;
+  &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>&lt;time&gt;</h3>
+          <p>Marca fechas de forma semántica.</p>
+          <pre><code>&lt;p&gt;Publicado: &lt;time datetime="2026-01-20"&gt;20 de enero&lt;/time&gt;&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIOS -->
+    <section>
+      <div class="section-title">
+        <h2>Formularios (Recopilar datos)</h2>
+        <p>Cómo crear campos para que usuarios envíen información.</p>
+      </div>
+
+      <div class="card box" style="margin-bottom:14px">
+        <h3>Ejemplo: Formulario Completo</h3>
+        <pre><code>&lt;form action="/enviar" method="POST"&gt;
+  &lt;!-- Entrada de texto --&gt;
+  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre" name="nombre" required&gt;
+
+  &lt;!-- Email --&gt;
+  &lt;label for="email"&gt;Correo:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;!-- Contraseña --&gt;
+  &lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+  &lt;input type="password" id="password" name="password"&gt;
+
+  &lt;!-- Área de texto --&gt;
+  &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+  &lt;textarea id="mensaje" name="mensaje" rows="5"&gt;&lt;/textarea&gt;
+
+  &lt;!-- Seleccionar --&gt;
+  &lt;label for="pais"&gt;País:&lt;/label&gt;
+  &lt;select id="pais" name="pais"&gt;
+    &lt;option value=""&gt;Seleccionar...&lt;/option&gt;
+    &lt;option value="mx"&gt;México&lt;/option&gt;
+    &lt;option value="es"&gt;España&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;!-- Radio buttons --&gt;
+  &lt;p&gt;Género:&lt;/p&gt;
+  &lt;input type="radio" id="masculino" name="genero" value="M"&gt;
+  &lt;label for="masculino"&gt;Masculino&lt;/label&gt;
+  
+  &lt;input type="radio" id="femenino" name="genero" value="F"&gt;
+  &lt;label for="femenino"&gt;Femenino&lt;/label&gt;
+
+  &lt;!-- Checkbox --&gt;
+  &lt;input type="checkbox" id="terminos" name="terminos"&gt;
+  &lt;label for="terminos"&gt;Acepto los términos y condiciones&lt;/label&gt;
+
+  &lt;!-- Botones --&gt;
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+  &lt;button type="reset"&gt;Limpiar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+
+      <div class="grid-3">
+        <div class="card box">
+          <h3>Tipos de Input</h3>
+          <pre><code>&lt;input type="text"&gt;
+&lt;input type="email"&gt;
+&lt;input type="password"&gt;
+&lt;input type="number"&gt;
+&lt;input type="date"&gt;
+&lt;input type="time"&gt;
+&lt;input type="color"&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Más Tipos</h3>
+          <pre><code>&lt;input type="range"&gt;
+&lt;input type="file"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="radio"&gt;
+&lt;input type="url"&gt;
+&lt;input type="tel"&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Atributos útiles</h3>
+          <pre><code>required
+placeholder="texto"
+disabled
+readonly
+pattern="[0-9]{3}"
+min="1" max="100"</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATRIBUTOS IMPORTANTES -->
+    <section>
+      <div class="section-title">
+        <h2>Atributos Importantes</h2>
+        <p>Propiedades que añaden funcionalidad a las etiquetas.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>id y class</h3>
+          <pre><code>&lt;div id="contenedor" class="seccion principal"&gt;
+  Contenido
+&lt;/div&gt;
+
+&lt;!-- id: único por página --&gt;
+&lt;!-- class: se puede repetir --&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>data (Datos personalizados)</h3>
+          <pre><code>&lt;div data-id="123" data-tipo="producto"&gt;
+  Producto
+&lt;/div&gt;
+
+&lt;!-- Útil para JavaScript --&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Accesibilidad</h3>
+          <pre><code>&lt;img src="foto.jpg" 
+     alt="Descripción para lectores"&gt;
+
+&lt;button aria-label="Cerrar"&gt;✕&lt;/button&gt;
+
+&lt;label for="entrada"&gt;Nombre:&lt;/label&gt;
+&lt;input id="entrada" type="text"&gt;</code></pre>
+        </div>
+
+        <div class="card box">
+          <h3>Meta tags (En &lt;head&gt;)</h3>
+          <pre><code>&lt;meta name="description" 
+      content="Descripción del sitio"&gt;
+&lt;meta name="keywords" 
+      content="html, css, web"&gt;
+&lt;meta name="author" 
+      content="Tu nombre"&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUENAS PRÁCTICAS -->
+    <section>
+      <div class="section-title">
+        <h2>Buenas Prácticas en HTML</h2>
+        <p>Código limpio y profesional.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card box">
+          <h3>✅ Hacer:</h3>
+          <ul>
+            <li>Usar etiquetas semánticas</li>
+            <li>Cerrar todas las etiquetas</li>
+            <li>Incluir atributo <code>alt</code> en imágenes</li>
+            <li>Usar nombres descriptivos en IDs/clases</li>
+            <li>Mantener indentación consistente</li>
+            <li>Separar HTML de CSS y JavaScript</li>
+            <li>Validar con <a href="https://validator.w3.org/" target="_blank">validator.w3.org</a></li>
+          </ul>
+        </div>
+
+        <div class="card box">
+          <h3>❌ Evitar:</h3>
+          <ul>
+            <li>Anidar demasiadas etiquetas</li>
+            <li>Usar <code>&lt;div&gt;</code> para todo</li>
+            <li>Olvidar <code>&lt;!DOCTYPE html&gt;</code></li>
+            <li>Atributo <code>alt</code> vacío en imágenes</li>
+            <li>Etiquetas mal cerradas</li>
+            <li>Código desordenado e indentado mal</li>
+            <li>HTML con mucho CSS inline</li>
+          </ul>
+        </div>
+      </div>
+    </section>  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="card footer-card">
+        <div class="footer-grid">
+          <div>
+            <b style="color:var(--text)">Jhon Byron Quiroz</b><br/>
+          </div>
+          <a class="btn primary" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Volver arriba</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

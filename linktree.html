@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Linktree</title>
+
+  <style>
+    /* =========================================
+       Estos son los estilos ✅ (colores y estilo general)
+    ========================================== */
+    :root{
+      --bg1: #0f172a;     /* color fondo 1 */
+      --bg2: #111827;     /* color fondo 2 */
+      --card: rgba(255,255,255,0.08);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --btn: rgba(255,255,255,0.10);
+      --btnHover: rgba(255,255,255,0.18);
+      --border: rgba(255,255,255,0.16);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: radial-gradient(900px 500px at 15% 10%, rgba(99,102,241,0.30), transparent 55%),
+                  radial-gradient(700px 480px at 85% 20%, rgba(34,197,94,0.22), transparent 55%),
+                  linear-gradient(160deg, var(--bg1), var(--bg2));
+    }
+
+    .card{
+      width: min(520px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .profile{
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .avatar{
+      width: 92px;
+      height: 92px;
+      border-radius: 999px;
+      border: 2px solid var(--border);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    h1{
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.3px;
+    }
+    .bio{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .links{
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .link{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--btn);
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .link:hover{
+      transform: translateY(-2px);
+      background: var(--btnHover);
+    }
+
+    .left{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .icon{
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.15);
+      flex: 0 0 auto;
+      font-size: 16px;
+    }
+
+    .text{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .arrow{
+      opacity: .8;
+      flex: 0 0 auto;
+    }
+
+    footer{
+      margin-top: 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 420px){
+      .card{ padding: 18px; }
+      .link{ padding: 12px; }
+    }
+  </style>
+
+  
+</head>
+
+<body>
+  <main class="card">
+
+    <!-- =========================================
+         EDITA AQUÍ ✅ (datos del perfil)
+    ========================================== -->
+    <section class="profile">
+      <!-- Opción A: Imagen desde internet (recomendado para clase) -->
+      <img class="avatar" src="https://i.pravatar.cc/200?img=12" alt="Foto de perfil">
+
+      <!-- Opción B: Imagen local 
+           1) crea carpeta img/
+           2) pon una imagen: img/foto.jpg
+           3) cambia src a: img/foto.jpg
+      -->
+
+      <h1>Tu Nombre Aquí</h1>
+      <p class="bio">
+        Soy estudiante y estoy aprendiendo HTML. Aquí dejo mis enlaces favoritos y mis proyectos.
+      </p>
+    </section>
+
+    <!-- =========================================
+         EDITA AQUÍ ✅ (botones / enlaces)
+         Cambia el texto y el href (link)
+         Puedes duplicar o borrar <a class="link">...</a>
+    ========================================== -->
+    <section class="links">
+      <a class="link" href="https://instagram.com" target="_blank">
+        <span class="left">
+          <span class="icon">📸</span>
+          <span class="text">Instagram</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link" href="https://tiktok.com" target="_blank">
+        <span class="left">
+          <span class="icon">🎵</span>
+          <span class="text">TikTok</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link" href="https://www.youtube.com" target="_blank">
+        <span class="left">
+          <span class="icon">▶️</span>
+          <span class="text">YouTube</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link" href="https://github.com" target="_blank">
+        <span class="left">
+          <span class="icon">💻</span>
+          <span class="text">GitHub / Portafolio</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link" href="mailto:correo@ejemplo.com">
+        <span class="left">
+          <span class="icon">✉️</span>
+          <span class="text">Escríbeme</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+    </section>
+
+    <!-- =========================================
+         EDITA AQUÍ ✅ (footer)
+    ========================================== -->
+    <footer>
+      Hecho por <b>@tu_usuario</b> — 2026
+    </footer>
+
+  </main>
+</body>
+</html>
